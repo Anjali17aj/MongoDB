@@ -1,0 +1,8 @@
+//For more information on usage: https://docs.mongodb.com/manual/reference/method
+test> use college
+switched to db college
+college> show dbs
+admin   40.00 KiB
+config  72.00 KiB
+local   72.00 KiB
+college> quit
