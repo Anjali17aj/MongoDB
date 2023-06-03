@@ -1,0 +1,28 @@
+test> db.student.find()
+[
+  {
+    _id: ObjectId("651ed2df905de123ed15fa84"),
+    name: 'Anjali kumari',
+    marks: 73
+  },
+  {
+    _id: ObjectId("651ed389905de123ed15fa85"),
+    name: 'Ashwini kumar',
+    marks: 78
+  },
+  {
+    _id: ObjectId("651ed389905de123ed15fa86"),
+    name: 'Chiky',
+    marks: 66
+  },
+  {
+    _id: ObjectId("651ed389905de123ed15fa87"),
+    name: 'Anita Ram',
+    marks: 78
+  }
+]
+test> db.student.find({city: "Delhi", marks: 75})
+
+test> db.student.find({name: "Anjali kumari", marks: 78})
+
+test>
