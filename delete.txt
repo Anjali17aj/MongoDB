@@ -1,0 +1,60 @@
+test> db.student.deleteOne({marks:73})
+{ acknowledged: true, deletedCount: 1 }
+test> db.student.find()
+[
+  {
+    _id: ObjectId("651ed389905de123ed15fa85"),
+    name: 'Ashwini kumar',
+    marks: 78
+  },
+  {
+    _id: ObjectId("651ed389905de123ed15fa86"),
+    name: 'Chiky',
+    marks: 66
+  },
+  {
+    _id: ObjectId("651ed389905de123ed15fa87"),
+    name: 'Ajay',
+    marks: 96,
+    state: 'Maharashtra'
+  },
+  {
+    _id: ObjectId("651ed5b8905de123ed15fa88"),
+    name: 'Ashwini kumar',
+    marks: 78,
+    city: 'Pune'
+  },
+  {
+    _id: ObjectId("651ed5b8905de123ed15fa89"),
+    name: 'Chiky',
+    marks: 66,
+    city: 'Mumbai'
+  },
+  {
+    _id: ObjectId("651ed5b8905de123ed15fa8a"),
+    name: 'Anita Ram',
+    marks: 78,
+    city: 'Kashmir'
+  },
+  {
+    _id: ObjectId("647a0ea6905de123ed15fa8b"),
+    name: 'Julie',
+    performance: { marks: 80, grade: 'A' }
+  }
+]
+test> db.student.deleteOne({marks:66})
+{ acknowledged: true, deletedCount: 1 }
+test>test> db.student.deleteMany({marks:{$lt:75}})
+{ acknowledged: true, deletedCount: 1 }
+
+test> db.student.deleteMany({})
+{ acknowledged: true, deletedCount: 5 }
+
+test> db.dropDatabase()
+{ ok: 1, dropped: 'test' }
+
+test> show dbs
+admin   40.00 KiB
+config  96.00 KiB
+local   72.00 KiB
+test>
