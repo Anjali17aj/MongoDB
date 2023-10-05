@@ -1,0 +1,14 @@
+# MongoDB It is a no sql database with the help of mongo shell we do CRUD operations inside mongo.
+MongoDB is popular with Express.js
+MERN
+MEAN 
+> mongosh //command to go to mongo shell from terminal.
+Mongo shell is a platform where we can run Mongo DB commands, add data, update data, delete data.
+In this repo I have used mongo Shell to perform CRUD operations.
+Mongo is also a type of JavaScript shell.
+C : Create/insert
+R : Read/Find 
+U : update
+D : delete
+Whenever we open a mongo shell it temporarily makes a database for us named "Test" but its not permanently stored in memory.
+
