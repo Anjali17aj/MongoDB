@@ -1,0 +1,447 @@
+C:\Users\Anjali>mongosh
+Current Mongosh Log ID: 652178be5be13e818d4e9296
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.0.1
+Using MongoDB:          7.0.2
+Using Mongosh:          2.0.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-10-07T14:50:28.351+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> show dbs
+admin   40.00 KiB
+amazon   8.00 KiB
+config  96.00 KiB
+local   72.00 KiB
+test    80.00 KiB
+test> use amazon
+switched to db amazon
+amazon> show collections
+books
+amazon> db.books.find()
+[
+  {
+    _id: ObjectId("652189792613f70fb48982cb"),
+    title: 'Maths',
+    author: 'RD Sharma',
+    price: 1200,
+    __v: 0
+  }
+]
+amazon> db.books.find()
+[
+  {
+    _id: ObjectId("652189792613f70fb48982cb"),
+    title: 'Maths',
+    author: 'RD Sharma',
+    price: 1200,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218be27f9a2cc82bb881b5"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218c30ef683d063c58e4dd"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218c65be72f2cd3e9ec2a4"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218d40c529a4eb4a588a2d"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    category: 'non-fiction',
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218da27399ecb80c9c3bf0"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    category: 'non-fiction',
+    genre: [ 'hindu', 'hindu-mythology' ],
+    __v: 0
+  }
+]
+amazon> db.books.find()
+[
+  {
+    _id: ObjectId("652189792613f70fb48982cb"),
+    title: 'Maths',
+    author: 'RD Sharma',
+    price: 1200,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218be27f9a2cc82bb881b5"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218c30ef683d063c58e4dd"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: -500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218c65be72f2cd3e9ec2a4"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218d40c529a4eb4a588a2d"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    category: 'non-fiction',
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218da27399ecb80c9c3bf0"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    category: 'non-fiction',
+    genre: [ 'hindu', 'hindu-mythology' ],
+    __v: 0
+  }
+]
+amazon> db.books.find()
+[
+  {
+    _id: ObjectId("652189792613f70fb48982cb"),
+    title: 'Maths',
+    author: 'RD Sharma',
+    price: 1200,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218be27f9a2cc82bb881b5"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218c30ef683d063c58e4dd"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: -500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218c65be72f2cd3e9ec2a4"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218d40c529a4eb4a588a2d"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    category: 'non-fiction',
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218da27399ecb80c9c3bf0"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    category: 'non-fiction',
+    genre: [ 'hindu', 'hindu-mythology' ],
+    __v: 0
+  }
+]
+amazon> db.books.find()
+[
+  {
+    _id: ObjectId("652189792613f70fb48982cb"),
+    title: 'Maths',
+    author: 'RD Sharma',
+    price: 1200,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218be27f9a2cc82bb881b5"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218c30ef683d063c58e4dd"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: -500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218c65be72f2cd3e9ec2a4"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218d40c529a4eb4a588a2d"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    category: 'non-fiction',
+    __v: 0
+  },
+  {
+    _id: ObjectId("65218da27399ecb80c9c3bf0"),
+    title: 'Srimad Bhagavad Gita',
+    author: 'Maharishi Veda Vyasa',
+    price: 500,
+    discount: 0,
+    category: 'non-fiction',
+    genre: [ 'hindu', 'hindu-mythology' ],
+    __v: 0
+  }
+]
+amazon>
+
+
+----------------------------------
+VS CODE:
+
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+ connection successful
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+ connection successful
+{
+  title: 'Maths',
+  author: 'RD Sharma',
+  price: 1200,
+  _id: new ObjectId("652189792613f70fb48982cb"),
+  __v: 0
+}
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+ connection successful
+{
+  title: 'Srimad Bhagavad Gita',
+  author: 'Maharishi Veda Vyasa',
+  price: 500,
+  discount: 0,
+  _id: new ObjectId("65218be27f9a2cc82bb881b5"),
+  __v: 0
+}
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+ connection successful
+{
+  title: 'Srimad Bhagavad Gita',
+  author: 'Maharishi Veda Vyasa',
+  price: 500,
+  discount: 0,
+  _id: new ObjectId("65218c30ef683d063c58e4dd"),
+  __v: 0
+}
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+ connection successful
+{
+  title: 'Srimad Bhagavad Gita',
+  author: 'Maharishi Veda Vyasa',
+  price: 500,
+  discount: 0,
+  _id: new ObjectId("65218c65be72f2cd3e9ec2a4"),
+  __v: 0
+}
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+ connection successful
+{
+  title: 'Srimad Bhagavad Gita',
+  author: 'Maharishi Veda Vyasa',
+  price: 500,
+  discount: 0,
+  category: 'non-fiction',
+  _id: new ObjectId("65218d40c529a4eb4a588a2d"),
+  __v: 0
+}
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+ connection successful
+{
+  title: 'Srimad Bhagavad Gita',
+  author: 'Maharishi Veda Vyasa',
+  price: 500,
+  discount: 0,
+  category: 'non-fiction',
+  genre: [ 'hindu', 'hindu-mythology' ],
+  _id: new ObjectId("65218da27399ecb80c9c3bf0"),
+  __v: 0
+}
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+ connection successful
+{
+  genre: [],
+  _id: new ObjectId("65218c30ef683d063c58e4dd"),
+  title: 'Srimad Bhagavad Gita',
+  author: 'Maharishi Veda Vyasa',
+  price: 500,
+  discount: 0,
+  __v: 0
+}
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+ connection successful
+{
+  genre: [],
+  _id: new ObjectId("65218c30ef683d063c58e4dd"),
+  title: 'Srimad Bhagavad Gita',
+  author: 'Maharishi Veda Vyasa',
+  price: -500,
+  discount: 0,
+  __v: 0
+}
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+Error: Validation failed: price: Path `price` (-100) is less than minimum allowed value (1).
+    at ValidationError.inspect (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2279:40)
+    at formatWithOptions (node:internal/util/inspect:2141:10)
+    at console.value (node:internal/console/constructor:343:14)
+    at console.log (node:internal/console/constructor:380:61)
+    at C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\books.js:47:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {     
+  errors: {
+    price: ValidatorError: Path `price` (-100) is less than minimum allowed value (1).  
+        at validate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\schematype.js:1365:13)
+        at SchemaType.doValidate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\schematype.js:1349:7)
+        at C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\helpers\updateValidators.js:151:22
+        at module.exports (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\helpers\updateValidators.js:202:7)
+        at C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:3930:7
+        at new Promise (<anonymous>)
+        at model.Query.validate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:3929:11)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)   
+        at async model.Query._findOneAndUpdate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:3358:5)
+        at async model.Query.exec (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:4430:11) {
+      properties: [Object],
+      kind: 'min',
+      path: 'price',
+      value: -100,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'Validation failed'
+}
+ connection successful
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+Error: Validation failed: price: Price is tooo low for amazon selling
+    at ValidationError.inspect (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:805:19)
+    at inspect (node:internal/util/inspect:364:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2279:40)
+    at formatWithOptions (node:internal/util/inspect:2141:10)
+    at console.value (node:internal/console/constructor:343:14)
+    at console.log (node:internal/console/constructor:380:61)
+    at C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\books.js:47:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {     
+  errors: {
+    price: ValidatorError: Price is tooo low for amazon selling
+        at validate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\schematype.js:1365:13)
+        at SchemaType.doValidate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\schematype.js:1349:7)
+        at C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\helpers\updateValidators.js:151:22
+        at module.exports (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\helpers\updateValidators.js:202:7)
+        at C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:3930:7
+        at new Promise (<anonymous>)
+        at model.Query.validate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:3929:11)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)   
+        at async model.Query._findOneAndUpdate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:3358:5)
+        at async model.Query.exec (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:4430:11) {
+      properties: [Object],
+      kind: 'min',
+      path: 'price',
+      value: -100,
+      reason: undefined,
+      [Symbol(mongoose:validatorError)]: true
+    }
+  },
+  _message: 'Validation failed'
+}
+ connection successful
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+{
+  price: ValidatorError: Price is tooo low for amazon selling
+      at validate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\schematype.js:1365:13)
+      at SchemaType.doValidate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\schematype.js:1349:7)
+      at C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\helpers\updateValidators.js:151:22
+      at module.exports (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\helpers\updateValidators.js:202:7)
+      at C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:3930:7
+      at new Promise (<anonymous>)
+      at model.Query.validate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:3929:11)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)     
+      at async model.Query._findOneAndUpdate (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:3358:5)
+      at async model.Query.exec (C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo\node_modules\mongoose\lib\query.js:4430:11) {
+    properties: {
+      validator: [Function (anonymous)],
+      message: 'Price is tooo low for amazon selling',
+      path: 'price',
+      value: -100
+    },
+    kind: 'min',
+    path: 'price',
+    value: -100,
+    reason: undefined,
+    [Symbol(mongoose:validatorError)]: true
+  }
+}
+ connection successful
+^C
+C:\Users\Anjali\Desktop\PRACTICE\BACKEND\Database\Mongo>node books.js
+Price is tooo low for amazon selling
+ connection successful
