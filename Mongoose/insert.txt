@@ -1,0 +1,42 @@
+const mongoose = require('mongoose');
+//let URL = "https://localhost:8080/users"
+//mongoose.connect('mongodb://127.0.0.1:27017/test'); //127.0.0.1 is a local host
+
+//Establishing connection
+main()
+.then(() => {    //if successfully executed then print result
+    console.log(" connection successful");
+})
+.catch(err => console.log(err)); //execution : with main function if error occur then catch error and print error
+
+async function main() { //asynchronous function it works separately
+  await mongoose.connect('mongodb://127.0.0.1:27017/test'); //awaiting connection with mongoose
+}
+
+//creating schema
+const userSchema = new mongoose.Schema({  //schema/blueprint of user collection this collection stores name , email and age
+    name: String,
+    email: String,
+    age: Number,
+});
+
+//schema converted to actual mongoDB database collection so collection created named User
+const User = mongoose.model("User", userSchema); //user is name of model - mongoose.model is a method - "User" is a name of collection - userSchema is a schema 
+
+
+// creating user's object model i.e a document created
+const user2 = new User({    
+    name: "Ashwini",  //properties of user
+    email: "ashwinichiky18@gmail.com",
+    age: 20,
+});
+
+//doc created is to be saved inside mongodb 
+user2
+.save() //its a asynchronous function which returns a promise.
+.then((res) => {
+    console.log(res);
+})
+.catch((err) => {
+    console.log(err);
+}); 

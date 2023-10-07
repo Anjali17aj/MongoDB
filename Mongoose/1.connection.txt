@@ -1,0 +1,15 @@
+const mongoose = require('mongoose');
+//let URL = "https://localhost:8080/users"
+//mongoose.connect('mongodb://127.0.0.1:27017/test'); //127.0.0.1 is a local host
+
+main()
+.then(() => {    //if successfully executed then print result
+    console.log(" connection successful");
+})
+.catch(err => console.log(err)); //execution : with main function if error occur then catch error and print error
+
+async function main() { //asynchronous function it works separately
+  await mongoose.connect('mongodb://127.0.0.1:27017/test'); //awaiting connection with mongoose
+
+
+}
